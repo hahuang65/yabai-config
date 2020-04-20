@@ -48,4 +48,8 @@ yabai -m space 2 --label "Chat"
 yabai -m space 3 --label "Music"
 yabai -m space 4 --label "Dev"
 
+yabai -m rule --add app="^Finder$" manage=off
+yabai -m rule --add app="^System Preferences$" manage=off
+yabai -m rule --add app="^TablePlus$" manage=off
+
 echo "yabai configuration loaded.."
