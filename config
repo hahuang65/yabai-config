@@ -52,4 +52,8 @@ yabai -m rule --add app="^Finder$" manage=off
 yabai -m rule --add app="^System Preferences$" manage=off
 yabai -m rule --add app="^TablePlus$" manage=off
 
+# This focuses the previous window if a window is not currently focused, such as when a floating window is minimized 
+# https://github.com/koekeishiya/yabai/issues/1212#issuecomment-1107854658
+yabai -m signal --add event=window_minimized active=yes action="if \$(yabai -m query --windows --window \$YABAI_WINDOW_ID | jq -r '.\"is-floating\"'); then yabai -m query --windows --window &> /dev/null || yabai -m window --focus mouse &> /dev/null || yabai -m window --focus \$(yabai -m query --windows --space | jq .[0].id) &> /dev/null; fi"
+
 echo "yabai configuration loaded.."
