@@ -56,7 +56,7 @@ yabai -m space 3 --label "Music"
 yabai -m space 4 --label "Dev"
 
 yabai -m rule --add app="^Finder$" manage=off
-yabai -m rule --add app="^System Preferences$" manage=off
+yabai -m rule --add app="^System Settings$" manage=off
 yabai -m rule --add app="^TablePlus$" manage=off
 yabai -m rule --add app="^1Password$" manage=off
 
