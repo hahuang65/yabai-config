@@ -59,6 +59,7 @@ yabai -m rule --add app="^Finder$" manage=off
 yabai -m rule --add app="^System Settings$" manage=off
 yabai -m rule --add app="^TablePlus$" manage=off
 yabai -m rule --add app="^1Password$" manage=off
+yabai -m rule --add app="^Headset$" manage=off
 
 # This focuses the previous window if a window is not currently focused, such as when a floating window is minimized
 # https://github.com/koekeishiya/yabai/issues/1212#issuecomment-1107854658
